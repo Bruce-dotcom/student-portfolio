@@ -16,7 +16,7 @@ if page == "Home":
     if uploaded_image:
         st.image(uploaded_image, width=150, caption="Profile Picture")
     else:
-        st.image(" student-portfolio/_DSC2192-Edited.jpg", width=150, caption="Default Profile")
+        st.image("student-portfolio/_DSC2192-Edited.jpg", width=150, caption="Default Profile")
 
     # Personal Details
     name = st.text_input("Full Name:", "Bruce ISHIMWE")
@@ -29,7 +29,7 @@ if page == "Home":
     st.write(f"📚 {field_of_study}")
 
     # Resume Download
-    with open(" student-portfolio/CV-BRUCE ISHIMWE.pdf", "rb") as file:
+    with open("student-portfolio/CV-BRUCE ISHIMWE.pdf", "rb") as file:
         resume_bytes = file.read()
     st.download_button("📄 Download Resume", data=resume_bytes, file_name="CV-BRUCE ISHIMWE.pdf", mime="application/pdf")
 
